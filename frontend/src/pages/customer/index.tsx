@@ -23,7 +23,7 @@ function UserProfile() {
     let res = await GetUsers();
 
     if (res.status === 200) {
-      console.log(res.data); // ตรวจสอบข้อมูลที่ได้รับ
+      console.log(res.data);
       const currentUser = res.data.find(
         (user: UsersInterface) => user.ID.toString() === myId
       );
@@ -39,7 +39,7 @@ function UserProfile() {
 
 
   useEffect(() => {
-    setProvinces(thaiProvinces); // Set provinces on component mount
+    setProvinces(thaiProvinces);
     getUser();
   }, []);
 
@@ -54,7 +54,7 @@ function UserProfile() {
       <div
         style={{
           padding: "40px",
-          backgroundColor: "#f5f5f5", // Solid color background
+          backgroundColor: "#f5f5f5",
         }}
       >
         <Row gutter={24} style={{ marginTop: 20 }}>
@@ -177,7 +177,7 @@ function UserProfile() {
             <Card
               title="ข้อมูลติดต่อ"
               bordered={false}
-              style={{ borderRadius: "12px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", marginBottom: '20px' }} // Add marginBottom here
+              style={{ borderRadius: "12px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)", marginBottom: '20px' }}
             >
               <p>
                 <strong>Contact:</strong> {user?.Contact}
@@ -187,7 +187,7 @@ function UserProfile() {
             <Card
               title="ประสบการณ์จ้างงาน"
               bordered={false}
-              style={{ borderRadius: "12px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }} // No marginBottom needed here
+              style={{ borderRadius: "12px", boxShadow: "0 4px 8px rgba(0, 0, 0, 0.1)" }}
             >
               <p>
                 <strong>Experience:</strong> {user?.experience} ปี

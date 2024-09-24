@@ -8,7 +8,7 @@ export interface UsersInterface {
   
     Email?: string;
   
-    Phone?: string;
+    Contact?: string;
   
     Age?: number;
   
@@ -31,5 +31,7 @@ export interface UsersInterface {
     Profile?: string;
 
     Company?: string;
+
+    Experience?: number;
   
   }

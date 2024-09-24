@@ -1,19 +1,15 @@
 export interface ProfileInterface {
 
-    ID?: number;
+    FirstName?: string;
+  
+    LastName?: string;
+  
+    Email?: string;
+  
+    Contact?: string;
 
-    WorkID? : string  ;    
+    Company?: string;
 
-   Name? : string  ;
-
-   Province? : string;
-
-   Subdistrict? : string;
-
-   District? : string;
-
-   Postalcode? : string;
-
-   Contact? : string;
+    Experience?: number;
   
   }
