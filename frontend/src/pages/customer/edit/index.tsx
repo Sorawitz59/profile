@@ -200,6 +200,24 @@ function CustomerEdit() {
                   </Form.Item>
                 </Col>
                 <Col xs={24} sm={24} md={12}>
+                  <Form.Item
+                    label="เบอร์โทร"
+                    name="Contact"
+                    rules={[{ required: true, message: "กรุณากรอกเบอร์โทร !" }]}
+                  >
+                    <Input placeholder="เบอร์โทร" />
+                  </Form.Item>
+                </Col>
+                <Col xs={24} sm={24} md={12}>
+                  <Form.Item
+                    label="อีเมล"
+                    name="email"
+                    rules={[{ required: true, message: "กรุณากรอกอีเมล !" }]}
+                  >
+                    <Input placeholder="อีเมล" />
+                  </Form.Item>
+                </Col>
+                <Col xs={24} sm={24} md={12}>
                   <Form.Item label="รูปประจำตัว" name="Profile">
                     <ImgCrop rotationSlider>
                       <Upload
@@ -268,15 +286,6 @@ function CustomerEdit() {
                     rules={[{ required: true, message: "กรุณากรอกรหัสไปรษณีย์ !" }]}
                   >
                     <Input placeholder="รหัสไปรษณีย์" />
-                  </Form.Item>
-                </Col>
-                <Col xs={24} sm={24} md={12}>
-                  <Form.Item
-                    label="เบอร์โทร"
-                    name="Contact"
-                    rules={[{ required: true, message: "กรุณากรอกเบอร์โทร !" }]}
-                  >
-                    <Input placeholder="เบอร์โทร" />
                   </Form.Item>
                 </Col>
               </Row>
