@@ -64,6 +64,8 @@ type (
        Contact   string       `json: "contact"`
 
        Profile   string `gorm:"type:longtext"`
+       
+       Company  string     `gorm:"company"`
 
    }
 
@@ -141,6 +143,8 @@ func SignUp(c *gin.Context) {
        GenderID:  payload.GenderID,
 
        Address:   payload.Address,
+
+       Company:   payload.Company,
 
        Subdistrict:   payload.Subdistrict,
 

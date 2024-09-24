@@ -29,5 +29,7 @@ export interface UsersInterface {
     Postalcode?: string;
 
     Profile?: string;
+
+    Company?: string;
   
   }

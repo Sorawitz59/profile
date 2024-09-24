@@ -42,4 +42,8 @@ type Users struct {
    Contact   string     `json: "contact"`
    
    Profile   string     `gorm:"type:longtext"`
+
+   Company string    `json:"company"`
+
+   Experience int    `json:"experience"`
 }

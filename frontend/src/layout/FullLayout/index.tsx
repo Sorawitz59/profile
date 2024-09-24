@@ -5,7 +5,7 @@ import {
   UserOutlined,
   PlusOutlined,
   HomeOutlined,
-  TeamOutlined,
+  LogoutOutlined // Import the logout icon
 } from "@ant-design/icons";
 import { Breadcrumb, Layout, Button, message, Avatar, theme, Dropdown, Menu } from "antd";
 import logo from "../../assets/logo.png";
@@ -48,9 +48,13 @@ const FullLayout: React.FC = () => {
   const menu = (
     <Menu>
       <Menu.Item key="1">
-        <Link to="/profile">โปรไฟล์</Link>
+        <Link to="/customer/profile/:id">โปรไฟล์</Link>
       </Menu.Item>
-      <Menu.Item key="2" onClick={Logout}>
+      <Menu.Item key="2">
+        <Link to="/customer/profile/history">ประวัติการทำงาน</Link>
+      </Menu.Item>
+      <Menu.Item key="3" onClick={Logout}>
+        <LogoutOutlined style={{ marginRight: '8px' }} />
         ออกจากระบบ
       </Menu.Item>
     </Menu>
@@ -86,7 +90,7 @@ const FullLayout: React.FC = () => {
                 <span style={{ color: 'white' }}> โพสงาน</span>
               </Link>
             </Button>
-            <Link to="/customer">  {/* ลิงก์ไปยังหน้าโปรไฟล์ */}
+            <Dropdown overlay={menu} placement="bottomRight">
               <Avatar
                 style={{
                   backgroundColor: '#1890ff',
@@ -95,8 +99,7 @@ const FullLayout: React.FC = () => {
                 }}
                 icon={<UserOutlined />}
               />
-            </Link>
-
+            </Dropdown>
           </div>
         </Header>
 
@@ -114,7 +117,6 @@ const FullLayout: React.FC = () => {
               <Route path="/work/create" element={<WorkCreate />} />
               <Route path="/work/edit/:id" element={<WorkEdit />} />
               <Route path="/go" element={<Postwork />} />
-              {/* <Route path="/pro" element={<ProfileCustomer />} /> */}
             </Routes>
           </div>
         </Content>
